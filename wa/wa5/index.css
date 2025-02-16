@@ -1,0 +1,85 @@
+.backdrop {
+padding: 4%;
+    width: 150mm;
+height: 300px;
+margin: 40px auto;
+position: relative;
+background-image: url(noFilter.jpg);
+background-repeat: no-repeat;
+background-color: white;
+background-attachment: local;
+background-size: 100%;
+}
+
+div {
+    text-align: center;
+}
+
+
+.titlecard {
+    background: linear-gradient(to bottom, rgba(255,0,0), rgba(0,0,255) 100%);
+    background-color: pink;
+    width: 100mm;
+    height: 50px;
+    font-size: 30px;
+    margin-left: 16%;
+    border-style: solid;
+    border-color: black;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.scorecard {
+    position: relative;
+    width: 500px;
+    height: 50px;
+    margin-left: 6%;
+    margin-top: 33%;
+    background-color: black;
+    border-style: solid;
+    border-color: black;
+    background: linear-gradient(to bottom, rgba(0,128,0), rgba(200,200,0) 100%);
+}
+
+.scoreformatting {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.score1 {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    padding-top: 1.5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.score2 {
+    position: absolute;
+    margin-left: 25%;
+    width: 25%;
+    height: 100%;
+    padding-top: 1.5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.score3 {
+    position: absolute;
+    margin-left: 50%;
+    width: 25%;
+    height: 100%;
+    padding-top: 1.5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.score4 {
+    position: absolute;
+    margin-left: 75%;
+    width: 25%;
+    height: 100%;
+    padding-top: 1.5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+p {
+    color: white;
+    margin-top: 7px;
+}
