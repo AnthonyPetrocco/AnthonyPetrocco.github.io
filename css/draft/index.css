@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1, h2  {
+    text-align: center;
+}
+
+h3 {
+    font-size: larger;
+    letter-spacing: 3px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+header {
+    font-size: xx-large;
+}
+
+div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1%;
+    border-style: solid;
+    border-color: blue;
+}
+
+p {
+    line-height: 150%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ccc;
+}
+
+.concertInfo {
+    font-size: large;
+    color: #555555;
+    line-height: 200%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
