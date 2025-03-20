@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border-style: solid;
+            border-color: black;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h6> this is an h6 </h6>
+    <button class="button1"> this is a button </button>
+    <div>
+    </div>
+    <button class="button2"> this is an anti-button </button>
+    <script>
+        let myBody = document.querySelector('body');
+        let btn = document.querySelector('.button1');
+        let btn2 = document.querySelector('.button2');
+        let box = document.querySelector('div');
+
+        btn.addEventListener('click', updateName);
+        btn2.addEventListener('click', resetName);
+
+        function updateName(){
+            let name = document.querySelector('h6');
+        //    const input = prompt('change the h6 to something less boring');
+        //    name.textContent = input;
+            name.style = "color: white"
+            myBody.style = "background-color: black"
+
+            box.style = "width: 500px; height: 500px; border-color: white;";
+            
+        }
+
+        function resetName(){
+            let name = document.querySelector('h6');
+        //    const input = prompt('change the h6 to something less boring');
+        //    name.textContent = input;
+            name.style = "color: black"
+            myBody.style = "background-color: white"
+
+            box.style = "width: 200px; height: 200px; border-color: black;";
+        }
+
+    </script>
+</body>
+</html>
