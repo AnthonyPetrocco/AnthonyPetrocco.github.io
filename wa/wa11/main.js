@@ -5,7 +5,7 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
-const imgfilenames = ["./images/Anthony.png","./images/IMG_6037.jpg", "./images/IMG_6049.jpg", "./images/IMG_6053.jpg", "./images/IMG_6062.jpg"];
+const imgfilenames = ["./images/Anthony.png","./images/IMG_6036.jpg", "./images/IMG_6049.jpg", "./images/IMG_6052.jpg", "./images/IMG_6062.jpg"];
 
 /* Declaring the alternative text for each image file */
 const imgaltnames = ["My beautiful face","List of female music patrons of the 19th century", "A collection of stick-figure poses for a stop-motion animation", "A large black mutt and a small white chihuahua sleeping together on a blanket", "Buttface"]
