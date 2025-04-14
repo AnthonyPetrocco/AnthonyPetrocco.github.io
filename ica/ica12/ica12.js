@@ -14,6 +14,7 @@ async function getQuote() {
         }
 
         const json = await response.json();
+        console.log(json);
         displayQuote(json.question);
 
         current.question = json.question;
