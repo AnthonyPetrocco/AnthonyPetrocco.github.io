@@ -26,7 +26,6 @@ let employees =
 ];
 
 console.log("Problem 1",employees[0],employees[1],employees[2]);
-console.log("Problem 1",employees)
 
 //Problem 2
 
