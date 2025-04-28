@@ -327,7 +327,7 @@ function displayNumber(finalNumber){
 
     if(numberCounter === 6){
         currentDigit.textContent = currentDigit.textContent.replaceAll("7","8")
-        newRule.textContent = " Rule 8: input must contain exactly THREE pi's (just type 'pi')"
+        newRule.textContent = " Rule 8: input must contain exactly THREE pi's (just type 'pi'). Remember to use operators whenever necessary; 2pi isn't valid, but 2*pi is."
         ruleSection.appendChild(newRule);
     }
 
