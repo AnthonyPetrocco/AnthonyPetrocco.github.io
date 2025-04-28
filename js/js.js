@@ -8,6 +8,8 @@ let displayedPhoneNumber = document.querySelector(".phoneNumber");
 //the section containing the rules
 let ruleSection = document.querySelector(".rules")
 
+let currentDigit = document.querySelector(".currentDigit");
+
 //the variable that stores the current phone number for displayedPhoneNumber
 let currentPhoneNumber = "";
 //the counter that keeps track of progress
@@ -291,43 +293,52 @@ function displayNumber(finalNumber){
     //adds the next rule to the page. Some of these blocks have extra code to help with formatting as the number grows.
     if(numberCounter === 0){
         displayedPhoneNumber.textContent = displayedPhoneNumber.textContent.replaceAll("-","")
+        currentDigit.textContent = currentDigit.textContent.replaceAll("1","2")
         newRule.textContent = " Rule 2: input must contain a *"
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 1){
+        currentDigit.textContent = currentDigit.textContent.replaceAll("2","3")
         newRule.textContent = " Rule 3: input must contain an exponent (use ^)"
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 2){
         displayedPhoneNumber.textContent = "(" + displayedPhoneNumber.textContent + ")-"
+        currentDigit.textContent = currentDigit.textContent.replaceAll("3","4")
         newRule.textContent = " Rule 4: input must contain a -"
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 3){
+        currentDigit.textContent = currentDigit.textContent.replaceAll("4","5")
         newRule.textContent = " Rule 5: input must NOT contain a 0 or 1"
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 4){
+        currentDigit.textContent = currentDigit.textContent.replaceAll("5","6")
         newRule.textContent = " Rule 6: input must contain a base 10 logarithm (use log())"
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 5){
         displayedPhoneNumber.textContent = displayedPhoneNumber.textContent + "-";
+        currentDigit.textContent = currentDigit.textContent.replaceAll("6","7")
         newRule.textContent = " Rule 7: input must contain a decimal"
         ruleSection.appendChild(newRule);
     }
 
     if(numberCounter === 6){
+        currentDigit.textContent = currentDigit.textContent.replaceAll("7","8")
         newRule.textContent = " Rule 8: input must contain exactly THREE pi's (just type 'pi')"
         ruleSection.appendChild(newRule);
     }
 
     if(numberCounter === 7){
+        currentDigit.textContent = currentDigit.textContent.replaceAll("8","9")
         newRule.textContent = " Rule 9: input must contain a sine function (use sin(). calculated in radians)"
         ruleSection.appendChild(newRule);
     }
 
     if(numberCounter === 8){
+        currentDigit.textContent = currentDigit.textContent.replaceAll("9","10")
         newRule.textContent = " Rule 10: no digit may appear more than 2 times (with the exception of pi)"
         ruleSection.appendChild(newRule);
     }
