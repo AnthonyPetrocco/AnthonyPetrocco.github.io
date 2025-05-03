@@ -45,3 +45,38 @@ h1 {
     width: 54%;
     margin-left: 23%;
 }
+
+@media screen and (max-width:400px) {
+    .yourPhoneNumber{
+        width: 80%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: black;
+        background-color: white;
+        border-radius: 10px;
+        margin-left: 10%;
+        box-shadow: 0 8px 5px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .disclaimer {
+        font-size: small;
+        color: gray;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .rule {
+        width: 80%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgba(0, 0, 0, 0.3);
+        background-color: white;
+        border-radius: 10px;
+        margin-left: 10%;
+        padding: 5px;
+    }
+}
