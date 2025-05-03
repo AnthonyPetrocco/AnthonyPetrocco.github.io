@@ -324,39 +324,39 @@ function displayNumber(finalNumber){
         displayedPhoneNumber.textContent = displayedPhoneNumber.textContent.replaceAll("-","")
         currentDigit.textContent = currentDigit.textContent.replaceAll("1","2")
         newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 1/12 + ")");
-        newRule.textContent = " Rule 2: input must contain a *"
+        newRule.textContent = " Rule 2: input must contain a *."
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 1){
         currentDigit.textContent = currentDigit.textContent.replaceAll("2","3")
         newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 2/12 + ")");
-        newRule.textContent = " Rule 3: input must contain an exponent (use ^)"
+        newRule.textContent = " Rule 3: input must contain an exponent. Use ^."
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 2){
         displayedPhoneNumber.textContent = "(" + displayedPhoneNumber.textContent + ")-"
         currentDigit.textContent = currentDigit.textContent.replaceAll("3","4")
         newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 3/12 + ")");
-        newRule.textContent = " Rule 4: input must contain a -"
+        newRule.textContent = " Rule 4: input must contain a -."
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 3){
         currentDigit.textContent = currentDigit.textContent.replaceAll("4","5")
         newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 4/12 + ")");
-        newRule.textContent = " Rule 5: input must NOT contain a 0 or 1"
+        newRule.textContent = " Rule 5: input must NOT contain a 0 or 1."
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 4){
         currentDigit.textContent = currentDigit.textContent.replaceAll("5","6")
         newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 5/12 + ")");
-        newRule.textContent = " Rule 6: input must contain a base 10 logarithm (use log())"
+        newRule.textContent = " Rule 6: input must contain a base 10 logarithm. Use log()."
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 5){
         displayedPhoneNumber.textContent = displayedPhoneNumber.textContent + "-";
         currentDigit.textContent = currentDigit.textContent.replaceAll("6","7")
         newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 6/12 + ")");
-        newRule.textContent = " Rule 7: input must contain a decimal"
+        newRule.textContent = " Rule 7: input must contain a decimal."
         ruleSection.appendChild(newRule);
     }
 
@@ -370,19 +370,21 @@ function displayNumber(finalNumber){
     if(numberCounter === 7){
         currentDigit.textContent = currentDigit.textContent.replaceAll("8","9")
         newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 8/12 + ")");
-        newRule.textContent = " Rule 9: input must contain a sine function (use sin(). calculated in radians)"
+        newRule.textContent = " Rule 9: input must contain a sine function. use sin(). Calculated in Radians."
         ruleSection.appendChild(newRule);
     }
 
     if(numberCounter === 8){
         currentDigit.textContent = currentDigit.textContent.replaceAll("9","10")
         newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 9/12 + ")");
-        newRule.textContent = " Rule 10: no digit may appear more than 2 times (with the exception of pi)"
+        newRule.textContent = " Rule 10: no digit may appear more than 2 times (with the exception of pi)."
         ruleSection.appendChild(newRule);
     }
 
     if(numberCounter === 9){
         alert("thank you for filling out this form! Your phone number is " + displayedPhoneNumber.textContent);
+        currentDigit.textContent = "Challenge Completed. Hope you had fun!";
+        input.setAttribute("readonly","true");
     }
 
     //increments the global number counter.
