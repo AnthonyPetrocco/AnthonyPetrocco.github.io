@@ -46,7 +46,7 @@ h1 {
     margin-left: 23%;
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:450px) {
     .yourPhoneNumber{
         width: 80%;
         padding-top: 5px;
