@@ -38,16 +38,18 @@ function calculateNumber(submission){
     //checks if the result is greater than 9
     if(intermediary !== "fail"){
 
+        console.log(intermediary)
+
         let finalNumber = eval(intermediary);
         
+        console.log(finalNumber);
+
         if(finalNumber > 9){
-            console.log(finalNumber)
             alert("result was greater than 9, try again!")
 
         //checks if the result is negative
         }else{
             if(finalNumber < 0){
-                console.log(finalNumber)
                 alert("result was a negative number, try again!");
 
             //checks if the number is a decimal
@@ -61,13 +63,13 @@ function calculateNumber(submission){
                     //an exception to the above statement that allows the result if it's close enough, then rounds the result
                     //this is necessary because sine functions are dumb
                     let approximation = 0.000001
-                    if(Math.abs(finalNumber) < Math.round(finalNumber) + approximation){
+
+                    if(finalNumber < Math.floor(finalNumber) + approximation){
+                        console.log("yes");
                         finalNumber = Math.round(finalNumber);
-                        console.log(finalNumber)
                         displayNumber(finalNumber);
 
                     } else {
-                        console.log(finalNumber)
                         alert("result was not an integer!")
                     }
                 }
@@ -102,6 +104,8 @@ function filter(submission){
             return("fail")
         }else{
 
+            submission = submission.replaceAll('^',"**");
+
 //begin rule checks. This runs the result of the equation through all the various rules one at a time.
 // Depending on which digit of the phone number is being entered, it may stop the check early and send the number out.
 //RULE 1
@@ -125,11 +129,10 @@ function filter(submission){
                             }
 //RULE 3
                             if(numberCounter >= 2){
-                                if(submission.indexOf('^')<= -1){
+                                if(submission.indexOf('**')<= -1){
                                     alert("didn't pass rule 3!");
                                     return("fail")
                                 } else {
-                                    submission = submission.replaceAll('^',"**");
                                     if(numberCounter === 2){
                                         return(submission);
                                     }
@@ -289,56 +292,66 @@ function displayNumber(finalNumber){
 
     //creates the paragraph element for the next rule
     let newRule = document.createElement('p');
+    newRule.setAttribute("class","rule");
 
     //adds the next rule to the page. Some of these blocks have extra code to help with formatting as the number grows.
     if(numberCounter === 0){
         displayedPhoneNumber.textContent = displayedPhoneNumber.textContent.replaceAll("-","")
         currentDigit.textContent = currentDigit.textContent.replaceAll("1","2")
+        newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 1/12 + ")");
         newRule.textContent = " Rule 2: input must contain a *"
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 1){
         currentDigit.textContent = currentDigit.textContent.replaceAll("2","3")
+        newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 2/12 + ")");
         newRule.textContent = " Rule 3: input must contain an exponent (use ^)"
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 2){
         displayedPhoneNumber.textContent = "(" + displayedPhoneNumber.textContent + ")-"
         currentDigit.textContent = currentDigit.textContent.replaceAll("3","4")
+        newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 3/12 + ")");
         newRule.textContent = " Rule 4: input must contain a -"
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 3){
         currentDigit.textContent = currentDigit.textContent.replaceAll("4","5")
+        newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 4/12 + ")");
         newRule.textContent = " Rule 5: input must NOT contain a 0 or 1"
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 4){
         currentDigit.textContent = currentDigit.textContent.replaceAll("5","6")
+        newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 5/12 + ")");
         newRule.textContent = " Rule 6: input must contain a base 10 logarithm (use log())"
         ruleSection.appendChild(newRule);
     }
     if(numberCounter === 5){
         displayedPhoneNumber.textContent = displayedPhoneNumber.textContent + "-";
         currentDigit.textContent = currentDigit.textContent.replaceAll("6","7")
+        newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 6/12 + ")");
         newRule.textContent = " Rule 7: input must contain a decimal"
         ruleSection.appendChild(newRule);
     }
 
     if(numberCounter === 6){
         currentDigit.textContent = currentDigit.textContent.replaceAll("7","8")
+        newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 7/12 + ")");
         newRule.textContent = " Rule 8: input must contain exactly THREE pi's (just type 'pi'). Remember to use operators whenever necessary; 2pi isn't valid, but 2*pi is."
         ruleSection.appendChild(newRule);
     }
 
     if(numberCounter === 7){
         currentDigit.textContent = currentDigit.textContent.replaceAll("8","9")
+        newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 8/12 + ")");
         newRule.textContent = " Rule 9: input must contain a sine function (use sin(). calculated in radians)"
         ruleSection.appendChild(newRule);
     }
 
     if(numberCounter === 8){
         currentDigit.textContent = currentDigit.textContent.replaceAll("9","10")
+        newRule.setAttribute("style","background-color: rgba(255, 0, 0," + 9/12 + ")");
         newRule.textContent = " Rule 10: no digit may appear more than 2 times (with the exception of pi)"
         ruleSection.appendChild(newRule);
     }

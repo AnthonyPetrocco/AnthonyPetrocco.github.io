@@ -1,3 +1,44 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: bisque;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 3px;
+}
+
+.rule {
+    width: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0.3);
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 25%;
+}
+
+.yourPhoneNumber{
+    width: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 25%;
+    box-shadow: 0 8px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.currentDigit {
+    margin-top: 30px;
+}
+
+.disclaimer {
+    font-size: small;
+    color: gray;
 }

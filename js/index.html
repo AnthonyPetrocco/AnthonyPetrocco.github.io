@@ -9,13 +9,16 @@
 <body>
     <h1>Phone number math</h1>
     <p>Enter your phone number one digit at a time in the form of a math expression (eg. 2+2). With every new digit, an additional rule is added.</p>
-    <p>Your phone number:</p>
-    <h2 class="phoneNumber">-</h2>
-    <p class="currentDigit">enter digit 1:</p>
+    <div class="yourPhoneNumber">
+        <p><strong>Your phone number:</strong></p>
+        <h2 class="phoneNumber">-</h2>
+    </div>
+    <p class="currentDigit">Enter Digit 1:</p>
     <input class="textInput" type="text" size="50"></input>
     <input class="submit" type="submit"></input>
+    <p class="disclaimer"> <strong>If you hit submit but nothing happens, </strong> make sure all operators have numbers or legal functions on either side of them. Also, remember to use * whenever necessary.</p>
     <div class="rules">
-        <p>Rule 1: input must contain a +</p>
+        <p class="rule">Rule 1: input must contain a +</p>
     </div>
 
     <script src="js.js"></script>
