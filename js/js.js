@@ -60,7 +60,7 @@ function calculateNumber(submission){
 
                 }else{
                     
-                    //an exception to the above statement that allows the result if it's close enough, then rounds the result
+                    //an exception to the above decimal rule that allows the result if it's close enough, then rounds the result
                     //this is necessary because sine functions are dumb
                     let approximation = 0.000001
 
@@ -103,6 +103,31 @@ function filter(submission){
             alert("don't enter =!");
             return("fail")
         }else{
+
+            if(numberCounter < 5){
+                submission = submission.replaceAll('log', "oof");
+                if(submission.indexOf('oof')> -1){
+                    alert("a logarithm already? Don't enter functions yet!");
+                    return("fail")
+                }
+            }
+
+            if(numberCounter < 7){
+                submission = submission.replaceAll('pi', "oof");
+                if(submission.indexOf('oof')> -1){
+                    alert("This isn't a bakery. Don't ask for pi!");
+                    return("fail")
+                }
+            }
+
+            if(numberCounter < 8){
+                submission = submission.replaceAll('sine', "oof");
+                if(submission.indexOf('oof')> -1){
+                    alert(" A sine function? Really? Come on dude, you're trying way too hard right now.");
+                    return("fail")
+                }
+            }
+                
 
             submission = submission.replaceAll('^',"**");
 

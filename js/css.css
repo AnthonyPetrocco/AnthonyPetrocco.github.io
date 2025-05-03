@@ -19,6 +19,7 @@ h1 {
     background-color: white;
     border-radius: 10px;
     margin-left: 25%;
+    padding: 5px;
 }
 
 .yourPhoneNumber{
@@ -41,4 +42,6 @@ h1 {
 .disclaimer {
     font-size: small;
     color: gray;
+    width: 54%;
+    margin-left: 23%;
 }
