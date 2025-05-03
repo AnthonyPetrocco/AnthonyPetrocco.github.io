@@ -121,7 +121,7 @@ function filter(submission){
             }
 
             if(numberCounter < 8){
-                submission = submission.replaceAll('sine', "oof");
+                submission = submission.replaceAll('sin', "oof");
                 if(submission.indexOf('oof')> -1){
                     alert(" A sine function? Really? Come on dude, you're trying way too hard right now.");
                     return("fail")
